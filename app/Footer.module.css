@@ -1,0 +1,29 @@
+.container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left,
+.right {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.listItems {
+  margin: 0 10px;
+}
+
+.copyright,
+.left {
+  opacity: 0.5;
+  font-size: smaller;
+}

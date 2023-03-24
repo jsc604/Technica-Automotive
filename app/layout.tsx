@@ -1,5 +1,15 @@
+import Script from 'next/script';
 import './globals.css'
 import Header from './Header'
+import { Inconsolata } from 'next/font/google';
+import Footer from './Footer';
+
+const inconsolata = Inconsolata({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['monospace', 'arial']
+})
 
 export const metadata = {
   title: 'Technica Automotive',
@@ -12,10 +22,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inconsolata.className}>
+      <Script src="https://kit.fontawesome.com/01f54e04b1.js" />
       <body className=''>
         <Header />
         {children}
+      <Footer />
       </body>
     </html>
   )
