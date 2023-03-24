@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+}
+
+.button {
+  margin: 1rem;
+}
+.quoteButton {
+  padding: 1rem;
+  border: 1px solid 'white';
+}
+
