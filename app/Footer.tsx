@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className={styles.container}>
       <ul className={styles.right}>
-        <li className={styles.listItems}><a href="https://www.facebook.com/TechnicaAutomotive/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-2xl"></i></a></li>
+        <li className={styles.listItems}><a href="https://www.facebook.com/TechnicaAutomotive/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-square-facebook fa-2xl"></i></a></li>
         <li className={styles.listItems}><a href="https://www.instagram.com/technicautomotive/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram fa-2xl"></i></a></li>
         <li className={styles.listItems}><a href="https://twitter.com/technicaauto" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-square-twitter fa-2xl"></i></a></li>
       </ul>

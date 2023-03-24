@@ -1,8 +1,8 @@
 import Script from 'next/script';
 import './globals.css'
 import Header from './Header'
-import { Inconsolata } from 'next/font/google';
 import Footer from './Footer';
+import { Inconsolata } from 'next/font/google';
 
 const inconsolata = Inconsolata({
   weight: '400',
