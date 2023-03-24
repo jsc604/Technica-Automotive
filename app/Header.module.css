@@ -15,7 +15,7 @@
   margin: 1rem;
 }
 .quoteButton {
-  padding: 1rem;
-  border: 1px solid 'white';
+  padding: 0.7rem;
+  border: 1px solid white;
+  border-radius: 1rem;
 }
-

@@ -20,7 +20,7 @@ export default function Header() {
         <Link className={styles.button} href='/'>Products & Gear</Link>
         <Link className={styles.button} href='/'>About</Link>
       </div>
-      <Link style={{padding: 10, borderColor: "white", borderWidth: 1, borderStyle: 'solid', borderRadius: 5}} href='/'>Get A Quote</Link>
+      <Link className={styles.quoteButton} href='/'>Get A Quote</Link>
     </nav>
   )
 }
