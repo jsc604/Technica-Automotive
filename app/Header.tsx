@@ -14,8 +14,8 @@ export default function Header() {
         />
       </Link>
       <div>
-        <Link className={styles.button} href='/'>Detailing</Link>
-        <Link className={styles.button} href='/'>Ceramic Coating</Link>
+        <Link className={styles.button} href='/detailing'>Detailing</Link>
+        <Link className={styles.button} href='/ceramic-coating'>Ceramic Coating</Link>
         <Link className={styles.button} href='/'>Paint Correction</Link>
         <Link className={styles.button} href='/'>Products & Gear</Link>
         <Link className={styles.button} href='/'>About</Link>
