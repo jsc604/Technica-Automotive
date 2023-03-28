@@ -1,13 +1,5 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { Inconsolata } from 'next/font/google';
-
-const inconsolata = Inconsolata({
-  weight: '800',
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['monospace', 'arial']
-});
 
 export default function Home() {
   return (

@@ -27,25 +27,25 @@ export default function Home() {
       <div className={styles.midContainer}>
         <div className={`${styles.mid}`}>
           <div className={styles.right}>
-            <h1 className={styles.line}>
-              Expert Care and Protection
-            </h1>
+            <h1 className={styles.heading}>Detailing</h1>
             <p>
-              Experience the unparalleled attention to detail and craftsmanship that sets us apart from the rest.
-              Through our comprehensive range of services, from paint correction to
-              interior detailing and protective coatings, we ensure that every aspect
-              of your ride receives the meticulous care it warrants.
-              Trust us to rejuvenate your ride and give it the care and protection it deserves.
+              At Technica Automotive, we believe that every vehicle deserves meticulous
+              attention and care. Our expert technicians provide a full suite of auto
+              detailing services, catering to the unique needs of your car. From
+              thorough interior cleaning and stain removal to exterior polishing and
+              paint protection, we use state-of-the-art equipment and high-quality
+              products to restore your vehicle&apos;s showroom shine. Choose Technica
+              Automotive and experience the transformative power of professional
+              detailing that elevates your driving experience to new heights.
             </p>
           </div>
           <div className={styles.imageContainer}>
             <Image
               className={styles.left}
-              src="https://images.unsplash.com/photo-1650049837038-821920beb2f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2834&q=80"
+              src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2062&q=80"
               alt="Sample Unsplash Image"
-              width={1470}
-              height={980}
-              layout='responsive'
+              layout="fill"
+              objectFit="cover"
             />
           </div>
         </div>
@@ -54,29 +54,58 @@ export default function Home() {
           <div className={styles.imageContainer}>
             <Image
               className={styles.left}
-              src="https://images.unsplash.com/photo-1577496549804-8b05f1f67338?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+              src="https://d1hv7ee95zft1i.cloudfront.net/custom/blog-post/original/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
               alt="Sample Unsplash Image"
-              width={1470}
-              height={980}
-              layout='responsive'
+              layout="fill"
+              objectFit="cover"
             />
           </div>
           <div className={styles.right}>
-            <h1 className={styles.heading}>Bridging Engineering and Detailing Excellence</h1>
+            <h1 className={styles.heading}>Ceramic Coating</h1>
             <p>
-              A pursuit for perfection is evident in every project we undertake.
-              Our team of skilled professionals are dedicated to providing exceptional detailing,
-              paint correction, and ceramic coating solutions that bring out the true beauty of your vehicle.
-              Experience the difference that comes from uniting engineering expertise with a keen eye for detail.
+              Embrace the ultimate protection for your vehicle with our advanced
+              ceramic coating services. Our expert technicians meticulously apply a
+              durable, hydrophobic layer that not only enhances your car&apos;s
+              appearance but also shields it from environmental contaminants,
+              UV rays, and minor scratches. Our high-performance ceramic coatings
+              provide long-lasting protection, making it easier to maintain your
+              vehicle&apos;s pristine condition while preserving its value. Trust Technica
+              Automotive for ceramic coating solutions that offer unrivaled gloss and
+              superior defense against the elements.
             </p>
           </div>
         </div>
+
+        <div className={`${styles.mid}`}>
+          <div className={styles.right}>
+            <h1 className={styles.heading}>Paint Correction</h1>
+            <p>
+              Discover the transformative power of professional paint correction . Our
+              skilled technicians utilize cutting-edge techniques and industry-leading
+              equipment to meticulously remove swirl marks, oxidation, and light
+              scratches from your vehicle&apos;s paintwork. By carefully restoring your
+              car&apos;s finish to its original glory, we reveal a breathtaking depth of
+              color and an unparalleled mirror-like shine. Trust Technica
+              Automotive&apos;s paint correction services to rejuvenate your vehicle
+              and elevate its appearance to a whole new level of perfection.
+            </p>
+          </div>
+          <div className={styles.imageContainer}>
+            <Image
+              className={styles.left}
+              src="https://images.unsplash.com/photo-1594097840961-411cf23dd23f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1418&q=80"
+              alt="Sample Unsplash Image"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </div>
       </div>
-      
+
       <div className={styles.top}>
         <h1 className={inconsolata.className}>
           Elevate your driving experience
-          <br/>
+          <br />
           with <span style={{ color: 'orange' }}>Technica Automotive </span>today!
         </h1>
         <button>
