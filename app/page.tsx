@@ -102,6 +102,10 @@ export default function Home() {
         </div>
       </div>
 
+      <div>
+        <h1>Reviews</h1>
+
+      </div>
       <div className={styles.top}>
         <h1 className={inconsolata.className}>
           Elevate your driving experience
