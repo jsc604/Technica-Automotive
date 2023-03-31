@@ -1,6 +1,17 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 import { Inconsolata } from 'next/font/google';
+import React from 'react';
+import type { GetServerSideProps } from 'next';
+import { GetServerSidePropsContext } from 'next';
+import ReviewsCarousel from './ReviewsCarousel';
+import fetchGoogleReviews from '../lib/googlePlaces';
+import type { GetStaticProps } from 'next';
+
+
+interface HomePageProps {
+  reviews: any[];
+}
 
 const inconsolata = Inconsolata({
   weight: '800',
@@ -9,7 +20,7 @@ const inconsolata = Inconsolata({
   fallback: ['monospace', 'arial']
 });
 
-export default function Home() {
+const Home: React.FC<HomePageProps> = ({ reviews }) => {
   return (
     <main className={styles.main}>
 
@@ -104,7 +115,7 @@ export default function Home() {
 
       <div>
         <h1>Reviews</h1>
-
+        <ReviewsCarousel reviews={reviews} />
       </div>
       <div className={styles.top}>
         <h1 className={inconsolata.className}>
@@ -119,3 +130,29 @@ export default function Home() {
     </main>
   );
 }
+
+// export async function getServerSideProps(context: GetServerSidePropsContext) {
+//   const placeId = 'ChIJFXVnBRzDhVQRZstR0x61Pjg';
+//   const reviews = await fetchGoogleReviews(placeId);
+
+//   return {
+//     props: {
+//       reviews,
+//     },
+//   };
+// }
+
+
+export const getStaticProps: GetStaticProps = async () => {
+  const placeId = 'ChIJFXVnBRzDhVQRZstR0x61Pjg';
+  const reviews = await fetchGoogleReviews(placeId);
+
+  return {
+    props: {
+      reviews,
+    },
+    revalidate: 60 * 60 * 24, // Revalidate every 24 hours
+  };
+};
+
+export default Home;
