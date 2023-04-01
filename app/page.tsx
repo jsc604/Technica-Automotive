@@ -16,15 +16,17 @@ const inconsolata = Inconsolata({
   fallback: ['monospace', 'arial']
 });
 
+const data = [];
+
 async function getReviews() {
-  const placeId = "ChIJ0_xvqWUD5kcRzKYnQQZJeZo";
+  const placeId = "ChIJFXVnBRzDhVQRZstR0x61Pjg";
   const reviewsData = await fetchGoogleReviews(placeId);
+  console.log(reviewsData);
   return reviewsData;
 }
 
 const reviews = getReviews();
-// console.log('====', reviews);
-
+console.log('reviews: ', reviews);
 
 const Home: React.FC<HomePageProps> = () => {
   
