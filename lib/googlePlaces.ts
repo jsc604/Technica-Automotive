@@ -6,9 +6,6 @@ async function fetchGoogleReviews(placeId: string) {
       `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`
     );
     const data = await response.json();
-    console.log('=======', data.result.reviews);
-
-    // const 
     return data.result.reviews;
   } catch (error) {
     console.error("Error fetching reviews:", error);

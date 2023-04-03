@@ -3,11 +3,6 @@ import styles from './page.module.css';
 import { Inconsolata } from 'next/font/google';
 import React from 'react';
 import ReviewsCarousel from './ReviewsCarousel';
-import fetchGoogleReviews from '@/lib/googlePlaces';
-
-interface HomePageProps {
-  reviews: any[];
-}
 
 const inconsolata = Inconsolata({
   weight: '800',
@@ -16,20 +11,24 @@ const inconsolata = Inconsolata({
   fallback: ['monospace', 'arial']
 });
 
-const data = [];
+const placeId = "ChIJFXVnBRzDhVQRZstR0x61Pjg";
+const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+
 
 async function getReviews() {
-  const placeId = "ChIJFXVnBRzDhVQRZstR0x61Pjg";
-  const reviewsData = await fetchGoogleReviews(placeId);
-  console.log(reviewsData);
-  return reviewsData;
+  const res = await fetch(
+    `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`
+  );
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch reviews');
+  }
+
+  return res.json();
 }
 
-const reviews = getReviews();
-console.log('reviews: ', reviews);
-
-const Home: React.FC<HomePageProps> = () => {
-  
+const Home = async () => {
+  const reviews = await getReviews();
 
   return (
     <main className={styles.main}>
@@ -123,9 +122,9 @@ const Home: React.FC<HomePageProps> = () => {
         </div>
       </div>
 
-      <div>
-        <h1>Reviews</h1>
-        <ReviewsCarousel reviews={reviews}/>
+      <div className='reviews'>
+        <h1 style={{textAlign: 'center'}}>Reviews</h1>
+        <ReviewsCarousel reviewData={reviews} />
       </div>
       <div className={styles.top}>
         <h1 className={inconsolata.className}>
