@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import { Inconsolata } from 'next/font/google';
 import React from 'react';
 import ReviewsCarousel from './ReviewsCarousel';
+import Link from 'next/link';
 
 const inconsolata = Inconsolata({
   weight: '800',
@@ -47,7 +48,9 @@ const Home = async () => {
       <div className={styles.midContainer}>
         <div className={`${styles.mid}`}>
           <div className={styles.right}>
-            <h1 className={styles.heading}>Detailing</h1>
+            <Link href='/detailing' className={styles.link}>
+              <h1 className={styles.heading}>Detailing</h1>
+            </Link>
             <p>
               At Technica Automotive, we believe that every vehicle deserves meticulous
               attention and care. Our expert technicians provide a full suite of auto
@@ -81,7 +84,9 @@ const Home = async () => {
             />
           </div>
           <div className={styles.right}>
-            <h1 className={styles.heading}>Ceramic Coating</h1>
+            <Link href='/ceramic-coating' className={styles.link}>
+              <h1 className={styles.heading}>Ceramic Coating</h1>
+            </Link>
             <p>
               Embrace the ultimate protection for your vehicle with our advanced
               ceramic coating services. Our expert technicians meticulously apply a
@@ -98,7 +103,9 @@ const Home = async () => {
 
         <div className={`${styles.mid}`}>
           <div className={styles.right}>
-            <h1 className={styles.heading}>Paint Correction</h1>
+            <Link href='/paint-correction' className={styles.link}>
+              <h1 className={styles.heading}>Paint Correction</h1>
+            </Link>
             <p>
               Discover the transformative power of professional paint correction . Our
               skilled technicians utilize cutting-edge techniques and industry-leading
@@ -123,7 +130,14 @@ const Home = async () => {
 
         <div className={styles.mid}>
           <div className={styles.reviews}>
-            <h1 className={styles.heading}>Reviews</h1>
+            <div>
+
+              <h1 className={styles.heading}>
+                <i className="fa-solid fa-quote-left" style={{ fontSize: 'smaller' }}></i>
+                &nbsp;Google Reviews&nbsp;
+                <i className="fa-solid fa-quote-right" style={{ fontSize: 'smaller' }}></i>
+              </h1>
+            </div>
             <ReviewsCarousel reviewData={reviews} />
           </div>
         </div>

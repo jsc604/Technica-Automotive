@@ -91,3 +91,7 @@
   flex-direction: column;
   width: 70%;
 }
+
+.link:hover{
+  color: orange;
+}
