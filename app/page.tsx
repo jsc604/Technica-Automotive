@@ -122,10 +122,13 @@ const Home = async () => {
         </div>
       </div>
 
-      <div className='reviews'>
-        <h1 style={{textAlign: 'center'}}>Reviews</h1>
+<div className={styles.mid}>
+      <div className={styles.reviews}>
+        <h1 className={styles.heading}>Reviews</h1>
         <ReviewsCarousel reviewData={reviews} />
       </div>
+      </div>
+
       <div className={styles.top}>
         <h1 className={inconsolata.className}>
           Elevate your driving experience

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import styles from './ReviewsCarousel.module.css';
 
 export interface Review {
   author_name: string;
@@ -27,22 +28,27 @@ const ReviewsCarousel: React.FC<ReviewsCarouselProps> = ({ reviewData }) => {
   console.log('reviews: ', reviews);
 
   return (
-    <Carousel
-      showStatus={false}
-      swipeable={true}
-      width={'60%'}
-      infiniteLoop={true}
-    >
-      {reviews && reviews.map((review: review, index: React.Key) => (
-        <div key={index}>
-          <div key={index} style={{ paddingLeft: 50, paddingRight: 50, paddingBottom: 20 }}>
-            <p>{review.author_name}</p>
-            <p>{review.text}</p>
-            <p>{review.rating} / 5</p>
+    <div className={styles.carouselContainer}>
+
+
+      <Carousel
+        className={styles.carousel}
+        showStatus={false}
+        swipeable={true}
+        infiniteLoop={true}
+        showThumbs={false}
+      >
+        {reviews && reviews.map((review: review, index: React.Key) => (
+          <div key={index}>
+            <div key={index} className={styles.reviewData}>
+              <p className={styles.author}>{review.author_name}</p>
+              <p>{review.text}</p>
+              <p>{review.rating} / 5</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </Carousel>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 
