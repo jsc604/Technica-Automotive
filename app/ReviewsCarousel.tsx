@@ -5,12 +5,6 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './ReviewsCarousel.module.css';
 
-export interface Review {
-  author_name: string;
-  rating: number;
-  text: string;
-}
-
 interface ReviewsCarouselProps {
   reviewData: any;
 }
@@ -21,16 +15,31 @@ type review = {
   text: string
 }
 
+interface StarRatingProps {
+  rating: number;
+}
+
 const ReviewsCarousel: React.FC<ReviewsCarouselProps> = ({ reviewData }) => {
 
   const reviews = reviewData.result.reviews;
 
-  console.log('reviews: ', reviews);
+  const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
+    const stars = [];
+
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <i
+          key={i}
+          className='fa-solid fa-star'
+          style={{ color: i <= rating ? 'gold' : 'white' }}
+        />
+      );
+    }
+
+    return <div>{stars}</div>;
+  };
 
   return (
-    <div className={styles.carouselContainer}>
-
-
       <Carousel
         className={styles.carousel}
         showStatus={false}
@@ -42,13 +51,12 @@ const ReviewsCarousel: React.FC<ReviewsCarouselProps> = ({ reviewData }) => {
           <div key={index}>
             <div key={index} className={styles.reviewData}>
               <p className={styles.author}>{review.author_name}</p>
+              <StarRating rating={review.rating} />
               <p>{review.text}</p>
-              <p>{review.rating} / 5</p>
             </div>
           </div>
         ))}
       </Carousel>
-    </div>
   );
 };
 

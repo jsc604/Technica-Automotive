@@ -1,16 +1,10 @@
 .reviewData {
   padding: 0 50px 20px 50px;
   font-size: large;
+  padding-bottom: 40px;
 }
 
 .author {
   font-weight: bold;
-  font-size: larger;
-}
-
-.carouselContainer {
-  text-align: center;
-  justify-content: center;
-  margin-top: auto;
-  margin-bottom: auto;
+  font-size: x-large;
 }

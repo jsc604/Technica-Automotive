@@ -120,13 +120,13 @@ const Home = async () => {
             />
           </div>
         </div>
-      </div>
 
-<div className={styles.mid}>
-      <div className={styles.reviews}>
-        <h1 className={styles.heading}>Reviews</h1>
-        <ReviewsCarousel reviewData={reviews} />
-      </div>
+        <div className={styles.mid}>
+          <div className={styles.reviews}>
+            <h1 className={styles.heading}>Reviews</h1>
+            <ReviewsCarousel reviewData={reviews} />
+          </div>
+        </div>
       </div>
 
       <div className={styles.top}>
