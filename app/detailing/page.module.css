@@ -62,10 +62,14 @@
 
 .button {
   padding: 0.7rem;
-  border: 1px solid white;
-  border-radius: 1rem;
-  margin: 0 1rem;
-  width: 25%;
+  border: 1px solid orange;
+  border-radius: 5px;
+  width: 33%;
+  background-color: darkslategrey;
+}
+
+.clicked{
+  color: orange;
 }
 
 .packageContainer {
@@ -79,6 +83,11 @@
 
 .buttonContainer {
   width: 33%;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: rgb(58, 55, 52);
+  align-items: center;
+  text-align: center;
 }
 
 .mid {

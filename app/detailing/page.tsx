@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 import Button from './Button';
+import SelectedButton from './providers/SelectedButton';
 
 export default function Home() {
   return (
@@ -30,11 +31,13 @@ export default function Home() {
 
       <div className={styles.packageContainer}>
         <h1>Our Packages</h1>
-        <div className={styles.buttonContainer}>
-          <Button title='Maintenence' />
-          <Button title='Upgraded' />
-          <Button title='Premium' />
-        </div>
+        <SelectedButton>
+          <div className={styles.buttonContainer}>
+            <Button title='Maintenance' />
+            <Button title='Upgraded' />
+            <Button title='Premium' />
+          </div>
+        </SelectedButton>
       </div>
     </main>
   );
