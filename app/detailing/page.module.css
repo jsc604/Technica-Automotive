@@ -55,3 +55,36 @@
   border-bottom: 1px solid orange;
   padding-bottom: 1rem;
 }
+
+.subHeading {
+  color: orange;
+}
+
+.button {
+  padding: 0.7rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: 0 1rem;
+  width: 25%;
+}
+
+.packageContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttonContainer {
+  width: 33%;
+}
+
+.mid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
