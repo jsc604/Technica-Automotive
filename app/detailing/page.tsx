@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Button from './Button';
 import SelectedButton from './providers/SelectedButton';
+import PackageCard from './PackageCard';
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
             <Button title='Upgraded' />
             <Button title='Premium' />
           </div>
+          <PackageCard />
         </SelectedButton>
       </div>
     </main>

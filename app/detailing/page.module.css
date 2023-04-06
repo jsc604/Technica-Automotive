@@ -62,14 +62,15 @@
 
 .button {
   padding: 0.7rem;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   border-radius: 5px;
   width: 33%;
-  background-color: darkslategrey;
+  background-color: black;
 }
 
 .clicked{
   color: orange;
+  border: 2px solid orange;
 }
 
 .packageContainer {
@@ -85,7 +86,7 @@
   width: 33%;
   border-radius: 5px;
   padding: 3px;
-  background-color: rgb(58, 55, 52);
+  /* background-color: black; */
   align-items: center;
   text-align: center;
 }
@@ -96,4 +97,43 @@
   justify-content: center;
   align-items: center;
   font-size: large;
+}
+
+.cardContainer {
+  /* border: 2px solid white; */
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  /* background-color:  rgba(0, 0, 0, 0.8);
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png"); */
+}
+
+.card {
+  /* border: 1px solid orange; */
+  border-radius: 10px;
+  width: 32%;
+  background-color:  rgba(0, 0, 0, 0.8);
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+}
+
+.cardHeading {
+  text-align: center;
+}
+
+.bookButton {
+  padding: 0.7rem;
+  /* border: 1px solid orange; */
+  border-radius: 5px;
+  width: 70%;
+  background-color: rgb(52, 45, 45);
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomCard {
+  margin-bottom: auto;
 }
