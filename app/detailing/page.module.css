@@ -117,6 +117,9 @@
   width: 32%;
   background-color:  rgba(0, 0, 0, 0.8);
   background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardHeading {
@@ -132,8 +135,4 @@
   margin: 10px auto;
   display: flex;
   justify-content: center;
-}
-
-.bottomCard {
-  margin-bottom: auto;
 }
