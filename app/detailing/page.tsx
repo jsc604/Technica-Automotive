@@ -41,6 +41,8 @@ export default function Home() {
           <PackageCard />
         </SelectedButton>
       </div>
+      <iframe src="https://orbisx.ca/app/booknow/VSV93?bg=%2300000" style={{borderRadius: 10, marginBottom: 20}} name="OrbisXbookingForm" id="OrbisXbookingForm" scrolling="yes" frameBorder="0" height="2000px" width="80%"></iframe>
+      <iframe src="https://orbisx.ca/app/embed-greviews/VSV93" name="gReviewsEmbedCode" scrolling="yes" frameBorder="0" height="800px" width="80%"></iframe>
     </main>
   );
 }
